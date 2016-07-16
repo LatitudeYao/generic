@@ -8,7 +8,13 @@
 
 from scrapy.loader import ItemLoader
 from scrapy.loader.processors import Compose
+import scrapy
 
+class ZzhItem(scrapy.Item):
+    title = scrapy.Field()
+    time = scrapy.Field()
+    url = scrapy.Field()
+    content = scrapy.Field()
 
 class StoreLoader(ItemLoader):
     #default_output_processor = Compose(lambda v: v[0], unicode.strip())

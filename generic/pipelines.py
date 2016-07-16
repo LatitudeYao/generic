@@ -20,7 +20,7 @@ class MongoPipeline(object):
         server = pymongo.MongoClient(port= port, host= host)
         db = server[dbname]
         self.db = db[settings['MONGODB_DOCNAME']]
-        print 'aaaaaaaaa'
+
 
     def process_item(self, item, spider):
         item = dict(item)

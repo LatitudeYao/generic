@@ -1,7 +1,6 @@
 # -*-coding: utf-8 -*-
 
 from scrapy.crawler import CrawlerProcess
-#from scrapy.settings import Settings
 from scrapy.conf import settings
 from generic.model.config import DBSession
 from generic.model.rule import Rule
