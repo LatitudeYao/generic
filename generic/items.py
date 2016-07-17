@@ -19,8 +19,17 @@ class ZzhItem(scrapy.Item):
 class StoreLoader(ItemLoader):
     #default_output_processor = Compose(lambda v: v[0], unicode.strip())
 
-    # def title_in(self, value):
-    #     for v in value:
-    #         yield 'my name is' + v
+    def title_in(self, value):
+        if len(value):
+            for v in value:
+                yield v.strip()
+        else:
+            yield '提取失败'
 
-    pass
+    def time_in(self, value):
+        if len(value):
+            for v in value:
+                yield v.strip()
+        else:
+            yield '提取失败'
+
